@@ -5,12 +5,13 @@ import sqlite3 as sql
 from tkinter.tix import INTEGER
 from tokenize import String
 
-
+# crear base de datos
 def creardb():
     con=sql.connect("colegio.db")
     con.commit()
     con.close()
 
+# crear tabla
 def create_table():
     con=sql.connect("colegio.db")
     cursor=con.cursor()
@@ -27,6 +28,7 @@ def create_table():
     con.commit()
     con.close()
 
+ # crear alumno
 def create_alumn():
     nombre= input("Ingrese nombre: ")
     apellido= input("Ingrese apellido: ")
@@ -45,7 +47,7 @@ def create_alumn():
     
         
         
-    
+  # consulta los alumnos en la base de datos  
 def consulta():
     con=sql.connect("colegio.db")
     cursor=con.cursor()
@@ -55,7 +57,7 @@ def consulta():
     con.commit()
     con.close()
 
-  
+  #busca un alumno en la base de datos
 def buscar():
     opcion=input("Desea buscar por ID o nombre y apellido? ID/NA: ")
     

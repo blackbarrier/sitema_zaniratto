@@ -8,7 +8,8 @@ def create_alumn():
     nombre=input1.get()
     apellido=input2.get()
     carrera=input3.get()
-        
+    print(nombre, apellido,carrera)
+
 
     if not nombre or not apellido or not carrera:
         messagebox.showerror("Error","Complete todos los campos")
